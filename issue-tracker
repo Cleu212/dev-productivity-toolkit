@@ -1,0 +1,5 @@
+issue-tracker/
+│
+├── issue_tracker.py
+├── issues.json
+└── README.md
