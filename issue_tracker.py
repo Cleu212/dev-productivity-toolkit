@@ -70,3 +70,4 @@ def list_issues():
 
     else:
         print("Invalid option")
+        print(load_issues())
