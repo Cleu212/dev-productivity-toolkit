@@ -1,7 +1,7 @@
 import json
 import os
 
-FILE_NAME = "issues.json"
+FILE_NAME = "issue.json"
 
 
 def load_issues():
