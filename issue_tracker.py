@@ -71,3 +71,67 @@ def list_issues():
     else:
         print("Invalid option")
         print(load_issues())
+        while True:
+
+    print("\nISSUE TRACKER")
+    print("1 - Create Issue")
+    print("2 - List Issues")
+    print("3 - Exit")
+
+    choice = input("Choose option: ")
+
+    if choice == "1":
+        create_issue()
+
+    elif choice == "2":
+        list_issues()
+
+    elif choice == "3":
+        break
+
+    else:
+        print("Invalid option")
+        
+def close_issue():
+
+    issues = load_issues()
+
+    issue_id = int(input("Enter issue ID to close: "))
+
+    for issue in issues:
+
+        if issue["id"] == issue_id:
+
+            issue["status"] = "closed"
+
+            save_issues(issues)
+
+            print("Issue closed successfully!")
+
+            return
+
+    print("Issue not found.")
+while True:
+
+    print("\nISSUE TRACKER")
+    print("1 - Create Issue")
+    print("2 - List Issues")
+    print("3 - Close Issue")
+    print("4 - Exit")
+
+    choice = input("Choose option: ")
+
+    if choice == "1":
+        create_issue()
+
+    elif choice == "2":
+        list_issues()
+
+    elif choice == "3":
+        close_issue()
+
+    elif choice == "4":
+        break
+
+    else:
+        print("Invalid option")
